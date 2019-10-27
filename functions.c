@@ -12,7 +12,7 @@ void print_list(struct node * n) {
 }
 
 struct node * insert_front(struct node * n, int x) {
-    struct node *p = calloc(sizeof(struct node), 1);
+    struct node *p = malloc(sizeof(struct node));
     p->i = x;
     p->next = n;
     return p;
@@ -21,6 +21,7 @@ struct node * insert_front(struct node * n, int x) {
 struct node * free_list(struct node * n) {
     struct node *p;
     while (n->next != NULL) {
+        printf("Freeing Node: %d\n", n->i);
         p = n->next;
         free(n);
         n = p;
