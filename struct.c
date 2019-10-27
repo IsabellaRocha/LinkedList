@@ -27,3 +27,20 @@ struct node * free_list(struct node * n) {
     }
     return p;
 }
+
+struct node * remove_node(struct node *front, int data) {
+    struct node *p;
+    struct node *temp;
+    p = front;
+    if (front-> i == daata) {
+        p = p->next;
+        free(front);
+        return p;
+    }
+    while (p != NULL) {
+        if(p->i == data)
+        temp = p->next;
+        temp->next = p->next->next;
+        p = p->next->next;
+    }
+}
