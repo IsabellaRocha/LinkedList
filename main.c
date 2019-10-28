@@ -33,7 +33,7 @@ int main() {
   print_list(test);
 
   printf("\nFreeing List \n");
-  test = free_test(test);
+  test = free_list(test);
   printf("Final List");
   print_list(test);
   return 0;
