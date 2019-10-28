@@ -27,7 +27,7 @@ int main() {
   test = remove_node(test, 5);
   print_list(test);
 
-  printf("\nRemoving %d", 9);
+  printf("\nRemoving %d\n", 9);
   printf("List: ");
   test = remove_node(test, 9);
   print_list(test);
