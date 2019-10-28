@@ -14,4 +14,8 @@ check: main.c functions.c headers.h
 	gcc -g main.c functions.c
 
 gdb:
-	gdb a.out
+	gdb program.exe
+
+clean:
+	rm *.o
+	rm *.exe
